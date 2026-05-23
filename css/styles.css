@@ -1,0 +1,370 @@
+/* =====================================================
+   VARIABLES GLOBALES
+   PERSONALIZAR: cambia estos colores para cambiar
+   la paleta de todo el sitio de una sola vez
+   ===================================================== */
+:root {
+  --rojo:     #c8102e;
+  --amarillo: #ffc72c;
+  --oscuro:   #1a1a1a;
+  --gris:     #f5f5f5;
+  --texto:    #222222;
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: var(--texto);
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6 { font-weight: 700; }
+img { max-width: 100%; }
+a   { text-decoration: none; }
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+#mainNav {
+  background-color: var(--rojo) !important;
+  border-bottom: 3px solid var(--amarillo);
+}
+#mainNav .navbar-brand {
+  color: var(--amarillo) !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+#mainNav .nav-link {
+  color: #fff !important;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active { color: var(--amarillo) !important; }
+#mainNav .dropdown-menu   { border-top: 3px solid var(--amarillo); }
+
+/* =====================================================
+   TÍTULOS
+   ===================================================== */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--rojo);
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: var(--amarillo);
+  margin: 6px auto 0;
+  border-radius: 2px;
+}
+.subseccion-titulo { font-weight: 700; color: var(--rojo); }
+
+/* =====================================================
+   HERO CARRUSEL (index.html)
+   ===================================================== */
+.hero-img {
+  height: 480px;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--rojo) 40%, var(--oscuro));
+}
+.hero-caption { text-shadow: 0 2px 8px rgba(0,0,0,0.7); }
+
+/* =====================================================
+   HERO ESTÁTICO (páginas internas)
+   PERSONALIZAR: en cada página puedes sobrescribir el
+   background-image para poner una foto diferente
+   ===================================================== */
+.hero-static {
+  height: 220px;
+  background: linear-gradient(135deg, var(--rojo), var(--oscuro));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-static h1 { color: var(--amarillo); font-size: 2.2rem; }
+.hero-static p  { font-size: 1rem; opacity: 0.85; margin-top: 8px; }
+
+/* =====================================================
+   ANIMACIONES — requeridas en el proyecto (criterio 2)
+   ===================================================== */
+@keyframes bounceIn {
+  0%   { opacity:0; transform:scale(0.5); }
+  70%  { transform:scale(1.05); }
+  100% { opacity:1; transform:scale(1); }
+}
+@keyframes fadeInUp {
+  0%   { opacity:0; transform:translateY(30px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+@keyframes pulse {
+  0%,100% { transform:scale(1); }
+  50%      { transform:scale(1.05); }
+}
+@keyframes slideInLeft {
+  0%   { opacity:0; transform:translateX(-40px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+@keyframes slideInRight {
+  0%   { opacity:0; transform:translateX(40px); }
+  100% { opacity:1; transform:translateX(0); }
+}
+
+.anim-bounce { animation: bounceIn 0.6s forwards; }
+.anim-fadeup { animation: fadeInUp 0.7s forwards; }
+.anim-pulse  { animation: pulse 2s ease-in-out infinite; }
+.anim-left   { animation: slideInLeft 0.7s forwards; }
+.anim-right  { animation: slideInRight 0.7s forwards; }
+
+/* =====================================================
+   TRANSICIONES — requeridas en el proyecto (criterio 2)
+   ===================================================== */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15) !important;
+}
+
+/* =====================================================
+   TARJETAS DE PRODUCTO
+   ===================================================== */
+.product-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.product-card img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+  background-color: var(--amarillo);
+}
+.product-card .card-title { color: var(--rojo); font-weight: 700; }
+.product-card .precio { color: var(--rojo); font-size: 1.1rem; font-weight: 700; }
+
+/* =====================================================
+   TABLA — requerida en el proyecto (criterio 2)
+   ===================================================== */
+.tabla-precios caption {
+  caption-side: top;
+  font-weight: 700;
+  color: var(--rojo);
+  font-size: 1rem;
+  padding-bottom: 8px;
+}
+
+/* =====================================================
+   FORMULARIOS — requeridos en el proyecto (criterio 2)
+   ===================================================== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--rojo);
+  box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.2);
+}
+
+/* =====================================================
+   ESTADÍSTICAS
+   ===================================================== */
+.stats-section { background: var(--rojo); padding: 40px 0; }
+
+.stat-card {
+  padding: 20px;
+  border: 2px solid var(--amarillo);
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.25s;
+}
+.stat-card:hover { transform: scale(1.06); }
+.stat-icon {
+  font-size: 2rem;
+  color: var(--amarillo);
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* =====================================================
+   GALERÍA (galeria.html)
+   ===================================================== */
+.galeria-item {
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+.galeria-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #ddd;
+  transition: transform 0.4s ease;
+  display: block;
+}
+.galeria-item:hover img { transform: scale(1.08); }
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(200,16,46,0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.galeria-item:hover .galeria-overlay { opacity: 1; }
+
+/* =====================================================
+   SUCURSALES (sucursales.html)
+   ===================================================== */
+.sucursal-card {
+  border-top: 4px solid var(--rojo) !important;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.sucursal-card:hover { transform: translateY(-4px); }
+.sucursal-card .card-title { color: var(--rojo); }
+
+/* =====================================================
+   PROMOCIONES (promociones.html)
+   ===================================================== */
+.promo-badge {
+  background: var(--rojo);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.promo-card {
+  border: 2px solid var(--amarillo);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* =====================================================
+   NOSOTROS — texto multicolumna (nosotros.html)
+   ===================================================== */
+.texto-multicolumna {
+  column-count: 2;
+  column-gap: 24px;
+  column-rule: 2px solid var(--amarillo);
+  text-align: justify;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   FAQ (faq.html)
+   ===================================================== */
+.accordion-button:not(.collapsed) {
+  background-color: var(--rojo);
+  color: #fff;
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.25);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.footer-section {
+  background-color: var(--oscuro);
+  padding: 40px 0 16px;
+  color: #fff;
+}
+.footer-brand  { font-size:1.2rem; font-weight:700; color:var(--amarillo); margin-bottom:8px; }
+.footer-desc   { color:rgba(255,255,255,0.6); font-size:13px; }
+.footer-heading{ color:var(--amarillo); font-weight:700; font-size:14px; margin-bottom:10px; }
+.footer-links a {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--amarillo); }
+.footer-social { color:var(--amarillo); font-size:1.4rem; transition:color 0.2s; }
+.footer-social:hover { color:#fff; }
+.footer-contact{ font-size:13px; color:rgba(255,255,255,0.6); margin-top:8px; }
+.footer-hr     { border-color:rgba(255,255,255,0.15); margin:20px 0 12px; }
+.footer-copy   { font-size:12px; color:rgba(255,255,255,0.4); }
+
+/* =====================================================
+   RESPONSIVE — criterio 3 del proyecto
+   PC: sin cambios / Tablet ≤992px / Móvil ≤768px
+   ===================================================== */
+@media (max-width: 768px) {
+  .hero-img           { height: 240px; }
+  .hero-caption h1    { font-size: 1.4rem; }
+  .hero-static        { height: 160px; }
+  .hero-static h1     { font-size: 1.4rem; }
+  .section-title      { font-size: 1.3rem; }
+  .texto-multicolumna { column-count: 1; }
+  .galeria-item img   { height: 160px; }
+}
+@media (max-width: 992px) {
+  .navbar-nav .dropdown-menu { position: static !important; }
+}
+
+/* =====================================================
+   CREADORES
+   ===================================================== */
+.creador-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.creador-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--amarillo);
+  background-color: #ddd;  /* color placeholder si no hay foto */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.creador-foto:hover {
+  transform: scale(1.1);
+  border-color: var(--rojo);
+}
+
+.creador-nombre {
+  font-weight: 700;
+  color: var(--rojo);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.creador-rol {
+  color: #777;
+  font-size: 0.82rem;
+  margin: 0;
+}
