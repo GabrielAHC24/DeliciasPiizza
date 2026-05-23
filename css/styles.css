@@ -1,8 +1,4 @@
-/* =====================================================
-   VARIABLES GLOBALES
-   PERSONALIZAR: cambia estos colores para cambiar
-   la paleta de todo el sitio de una sola vez
-   ===================================================== */
+
 :root {
   --rojo:     #c8102e;
   --amarillo: #ffc72c;
@@ -11,9 +7,7 @@
   --texto:    #222222;
 }
 
-/* =====================================================
-   BASE
-   ===================================================== */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -27,9 +21,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: 700; }
 img { max-width: 100%; }
 a   { text-decoration: none; }
 
-/* =====================================================
-   NAVBAR
-   ===================================================== */
+
 #mainNav {
   background-color: var(--rojo) !important;
   border-bottom: 3px solid var(--amarillo);
@@ -48,9 +40,7 @@ a   { text-decoration: none; }
 #mainNav .nav-link.active { color: var(--amarillo) !important; }
 #mainNav .dropdown-menu   { border-top: 3px solid var(--amarillo); }
 
-/* =====================================================
-   TÍTULOS
-   ===================================================== */
+
 .section-title {
   font-size: 1.8rem;
   font-weight: 700;
@@ -68,9 +58,7 @@ a   { text-decoration: none; }
 }
 .subseccion-titulo { font-weight: 700; color: var(--rojo); }
 
-/* =====================================================
-   HERO CARRUSEL (index.html)
-   ===================================================== */
+
 .hero-img {
   height: 480px;
   object-fit: cover;
@@ -78,11 +66,7 @@ a   { text-decoration: none; }
 }
 .hero-caption { text-shadow: 0 2px 8px rgba(0,0,0,0.7); }
 
-/* =====================================================
-   HERO ESTÁTICO (páginas internas)
-   PERSONALIZAR: en cada página puedes sobrescribir el
-   background-image para poner una foto diferente
-   ===================================================== */
+
 .hero-static {
   height: 220px;
   background: linear-gradient(135deg, var(--rojo), var(--oscuro));
@@ -95,9 +79,7 @@ a   { text-decoration: none; }
 .hero-static h1 { color: var(--amarillo); font-size: 2.2rem; }
 .hero-static p  { font-size: 1rem; opacity: 0.85; margin-top: 8px; }
 
-/* =====================================================
-   ANIMACIONES — requeridas en el proyecto (criterio 2)
-   ===================================================== */
+
 @keyframes bounceIn {
   0%   { opacity:0; transform:scale(0.5); }
   70%  { transform:scale(1.05); }
@@ -126,9 +108,7 @@ a   { text-decoration: none; }
 .anim-left   { animation: slideInLeft 0.7s forwards; }
 .anim-right  { animation: slideInRight 0.7s forwards; }
 
-/* =====================================================
-   TRANSICIONES — requeridas en el proyecto (criterio 2)
-   ===================================================== */
+
 .card-hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -137,9 +117,7 @@ a   { text-decoration: none; }
   box-shadow: 0 10px 28px rgba(0,0,0,0.15) !important;
 }
 
-/* =====================================================
-   TARJETAS DE PRODUCTO
-   ===================================================== */
+
 .product-card {
   border: none;
   border-radius: 14px;
@@ -155,9 +133,7 @@ a   { text-decoration: none; }
 .product-card .card-title { color: var(--rojo); font-weight: 700; }
 .product-card .precio { color: var(--rojo); font-size: 1.1rem; font-weight: 700; }
 
-/* =====================================================
-   TABLA — requerida en el proyecto (criterio 2)
-   ===================================================== */
+
 .tabla-precios caption {
   caption-side: top;
   font-weight: 700;
@@ -166,18 +142,14 @@ a   { text-decoration: none; }
   padding-bottom: 8px;
 }
 
-/* =====================================================
-   FORMULARIOS — requeridos en el proyecto (criterio 2)
-   ===================================================== */
+
 .form-control:focus,
 .form-select:focus {
   border-color: var(--rojo);
   box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.2);
 }
 
-/* =====================================================
-   ESTADÍSTICAS
-   ===================================================== */
+
 .stats-section { background: var(--rojo); padding: 40px 0; }
 
 .stat-card {
@@ -196,9 +168,7 @@ a   { text-decoration: none; }
   margin-bottom: 6px;
 }
 
-/* =====================================================
-   GALERÍA (galeria.html)
-   ===================================================== */
+
 .galeria-item {
   overflow: hidden;
   border-radius: 12px;
@@ -229,9 +199,7 @@ a   { text-decoration: none; }
 }
 .galeria-item:hover .galeria-overlay { opacity: 1; }
 
-/* =====================================================
-   SUCURSALES (sucursales.html)
-   ===================================================== */
+
 .sucursal-card {
   border-top: 4px solid var(--rojo) !important;
   border-radius: 10px;
@@ -240,9 +208,7 @@ a   { text-decoration: none; }
 .sucursal-card:hover { transform: translateY(-4px); }
 .sucursal-card .card-title { color: var(--rojo); }
 
-/* =====================================================
-   PROMOCIONES (promociones.html)
-   ===================================================== */
+
 .promo-badge {
   background: var(--rojo);
   color: #fff;
@@ -264,9 +230,7 @@ a   { text-decoration: none; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* =====================================================
-   NOSOTROS — texto multicolumna (nosotros.html)
-   ===================================================== */
+
 .texto-multicolumna {
   column-count: 2;
   column-gap: 24px;
@@ -277,9 +241,7 @@ a   { text-decoration: none; }
   line-height: 1.7;
 }
 
-/* =====================================================
-   FAQ (faq.html)
-   ===================================================== */
+
 .accordion-button:not(.collapsed) {
   background-color: var(--rojo);
   color: #fff;
@@ -289,9 +251,7 @@ a   { text-decoration: none; }
   box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.25);
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
+
 .footer-section {
   background-color: var(--oscuro);
   padding: 40px 0 16px;
@@ -314,10 +274,7 @@ a   { text-decoration: none; }
 .footer-hr     { border-color:rgba(255,255,255,0.15); margin:20px 0 12px; }
 .footer-copy   { font-size:12px; color:rgba(255,255,255,0.4); }
 
-/* =====================================================
-   RESPONSIVE — criterio 3 del proyecto
-   PC: sin cambios / Tablet ≤992px / Móvil ≤768px
-   ===================================================== */
+
 @media (max-width: 768px) {
   .hero-img           { height: 240px; }
   .hero-caption h1    { font-size: 1.4rem; }
@@ -331,9 +288,7 @@ a   { text-decoration: none; }
   .navbar-nav .dropdown-menu { position: static !important; }
 }
 
-/* =====================================================
-   CREADORES
-   ===================================================== */
+
 .creador-card {
   display: flex;
   flex-direction: column;
@@ -347,7 +302,7 @@ a   { text-decoration: none; }
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--amarillo);
-  background-color: #ddd;  /* color placeholder si no hay foto */
+  background-color: #ddd; 
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
